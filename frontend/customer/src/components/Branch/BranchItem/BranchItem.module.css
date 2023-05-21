@@ -1,0 +1,42 @@
+.BranchItem{
+  width: 100%;
+}
+
+.BranchItem .title{
+  padding: 1rem 4rem;
+  background-color: #E2ECF9;
+  color: #083F73;
+  font-weight: 600;
+}
+
+.items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right:3rem ;
+}
+
+.item{
+  gap:0.5rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding:1rem 0rem;
+}
+
+.phone{
+  width: 15rem;
+  /* background-color: blue; */
+  justify-content: center;
+}
+
+.address{
+  width: 74rem;
+  padding-left: 4rem;
+  /* background-color: yellow; */
+  box-sizing: border-box;
+}
+
+.item p{
+  font-size: 1.5rem;
+}

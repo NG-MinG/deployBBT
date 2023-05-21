@@ -1,0 +1,45 @@
+.ScheduleItem{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.ScheduleItem p{
+  /* font-weight: 500; */
+  text-align: center;
+  /* background-color: aqua; */
+}
+
+.ScheduleItem p:nth-child(1){
+  width: 28rem;
+}
+
+.ScheduleItem p:nth-child(2){
+  width: 12rem;
+}
+
+.ScheduleItem p:nth-child(3){
+  width: 15rem;
+}
+
+.ScheduleItem p:nth-child(4){
+  width: 18rem;
+}
+
+.ScheduleItem button{
+  background-color: #417DD8;
+  border: none;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: .5rem 1.5rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+  font-family: "Montserrat"
+}
+
+.ScheduleItem button:hover{
+  background-color: #083F73;
+}

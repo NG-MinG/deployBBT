@@ -1,0 +1,75 @@
+.ManageTicketOrderItem{
+  /* padding: 1rem .5rem; */
+  display: flex;
+  align-items: center;
+  height: 4.5rem;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ManageTicketOrderItem p{
+  font-size: 1.4rem;
+  /* background-color: aqua; */
+  text-align: center;
+}
+
+.ManageTicketOrderItem p:nth-child(1){
+  width: 6rem;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.ManageTicketOrderItem p:nth-child(2){
+  margin-left: 2rem;
+  width: 20rem;
+}
+
+.ManageTicketOrderItem p:nth-child(3){
+  margin-left: 2rem;
+  width: 13rem;
+}
+
+.ManageTicketOrderItem p:nth-child(4){
+  margin-left: 2rem;
+  width: 25rem;
+}
+
+.ManageTicketOrderItem p:nth-child(5){
+  margin-left: 1.5rem;
+  width: 13rem;
+}
+
+.ManageTicketOrderItem p:nth-child(6){
+  margin-left: .9rem;
+  width: 11rem;
+}
+
+.ManageTicketOrderItem button{
+  margin-left: 2.6rem;
+  border: none;
+  background-color: #D2712B;
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.green{
+  background-color: #2b8a3e !important;
+}
+
+.red{
+  background-color: #c92a2a !important;
+}
+
+.ManageTicketOrderItem .icon{
+  margin-left: 2rem;
+  cursor: pointer;
+  font-size: 2.1rem;
+}
+

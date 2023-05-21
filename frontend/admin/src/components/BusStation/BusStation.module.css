@@ -1,0 +1,242 @@
+.a{
+    margin: 4rem auto 0 auto ;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container p{
+    color: #417DD8;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+}
+
+.sub-header-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+.sub-header-container input{
+    border: #417DD8 solid 1px;
+    height: 3.6rem;
+    width: 25rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.search-button{
+    border: #417DD8 solid 1px;
+    background: #417DD8;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    height: 3.6rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.search-button:hover{
+    background: #5892e9;
+    cursor: pointer;
+    color: white;
+}
+
+.add-button{
+    border: #417DD8 solid 1px;
+    background: #417DD8;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    height: 3.6rem;
+    width: 12rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.add-button:hover{
+    background: #5892e9;
+    cursor: pointer;
+    color: white;
+}
+
+.filter-icon{
+    padding: 0;
+    border: #417DD8 solid 1px;
+    border-radius: 0.5rem;
+    height: 3.6rem;
+    width: 3.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.table-containter {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 2rem;
+  }
+  
+.table-containter thead{
+    position: sticky;
+    top: 0;
+  }
+.table-containter td, .table-containter th {
+    padding: 0.8rem;
+  }
+
+.small-space{
+    width: 2rem;
+}
+
+.table-containter tr:nth-child(even){background-color: #EAF5FF;}
+  
+.table-containter tr:hover {background-color: #E6ECF1;}
+  
+.table-containter > thead > tr > th {
+    text-align: left;
+    padding: 1rem;
+    background-color: #417DD8;
+    color: white;
+  }
+
+.table-containter > tbody > tr > td {
+    padding: 1rem; 
+}
+
+.table-containter > tbody > tr > td > a {
+    cursor: pointer;
+}
+
+.table-containter > tbody > tr > td > a :hover {
+    cursor: pointer;
+}
+
+.listAccount{
+    margin-top: 3rem;
+    height: 55rem;
+    overflow: auto;
+    border-radius: 1rem;
+    border: 1px solid #B8B1B1;
+}
+
+.listAccount::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+}
+  
+.listAccount::-webkit-scrollbar-thumb {
+    background: #e0e0e0; /* color of the thumb */
+    border-radius: 10px; /* rounded corners of the thumb */
+}
+  
+.listAccount::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+.foot-new{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-head{
+    font-size: 1.7rem;
+    color: #417DD8;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.modal-save-button{
+    background: #417DD8;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    margin-top: 1rem;
+}
+
+.modal-save-button:hover{
+    background: #5892e9;
+    cursor: pointer;
+    color: white;
+}
+
+.modal-cancel-button{
+    background: #868e96;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    height: 3rem;
+    width: 5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    margin-top: 1rem;
+}
+
+.modal-cancel-button:hover{
+    background: #adb5bd;
+    cursor: pointer;
+    color: white;
+}
+
+
+.modal-body-container{
+    margin: 1rem 2.5rem;
+}
+
+.modal-row-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+.modal-row-container > div{
+font-weight: 600;
+}
+
+.modal-row-container > select, input{
+    height: 3rem;
+    width: 30rem;
+}

@@ -1,0 +1,237 @@
+.nav-bar {
+    height: 7rem;
+    width: 100%;
+    background-color: burlywood;
+}
+
+.main-content {
+    margin: 0 auto;
+    margin-top: 4.6rem;
+    width: 90%;
+}
+
+
+
+.btn-wrapper {
+    margin: 3.6rem auto;
+    width: 70rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btn-wrapper > button {
+    width: 25rem;   
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-wrapper > .back-to-previous  {
+    background-color: white;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.btn-wrapper > .back-to-previous:hover  {
+    border: 2px solid #417DD8;
+    background-color: #417DD8;
+}
+
+.btn-wrapper > .back-to-previous:hover  > span.content {
+    color: #fff;
+}
+
+.btn-wrapper > .back-to-previous:hover svg.back-icon path{
+    fill: #fff;
+}
+
+.btn-wrapper > .continue  {
+    background-color: #417DD8;
+    border: 2px solid #417DD8;
+    cursor: pointer;
+}
+
+.btn-wrapper > .continue:hover  {
+    background-color: #1b6bb6;
+    /* color: #417DD8; */
+}
+/* 
+.btn-wrapper > .continue:hover  > span.content {
+    color: #417DD8;
+}
+
+.btn-wrapper > .continue:hover svg.next-icon path{
+    fill: #417DD8;
+} */
+
+
+
+.btn-wrapper > .continue > span.content {
+    color: #fff;
+}
+
+/* .btn-wrapper > .continue > span.content:hover {
+    color: #417DD8;
+}
+  */
+.back-icon, .next-icon {
+    font-size: 0.65em;
+}
+
+
+.guest-info {
+    margin: 0 auto;
+    margin-top: 6rem;
+    width: 50rem;
+    border-radius: 8px;
+    background-color: #f6f6f6;
+    border: 1px solid #afafaf;
+    padding-bottom: 3rem;
+}
+
+.guest-info > div.title {
+    font-size: 2rem;
+    color: #417DD8;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem;
+    text-align: center;
+}
+
+.guest-info > div.input {   
+    /* background-color: red; */
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.guest-info > div.input > label {
+    display: block; 
+}
+
+.guest-info > div.input > input {
+    margin-top: 0.8rem;
+    width: 100%;
+    height: 3.4rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    outline: none;
+    padding: 2rem;
+    font-family: 'Montserrat';
+}
+
+.guest-info > div.input > input:placeholder-shown {
+    font-family: 'Montserrat';
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.guest-info > div.input > div.age > label,
+.guest-info > div.input > div.city > label {
+    display: block; 
+}
+
+.guest-info > div.input > div.age >  input {
+    margin-top: 0.8rem;
+    height: 3.4rem;
+    width: 20rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    outline: none;
+    padding: 0.8rem;
+    font-family: 'Montserrat';
+}
+
+.guest-info > div.input > div.city >  select > option {
+    color: #333;
+}
+
+
+.guest-info > div.input > div.age > input:placeholder-shown
+{
+    font-family: 'Montserrat';
+}
+
+.guest-info > div.input > div.city >  select {
+    margin-top: 0.8rem;
+    height: 3.4rem;
+    width: 20rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    outline: none;
+    font-family: 'Montserrat';
+    padding: 0.8rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("../../../assets/svg/TicketBooking/down_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+}
+
+
+.note-form {
+    position: relative;
+}
+
+.note-form  > .form {
+    z-index: 3;
+    position: fixed;
+    width: 60rem; 
+    height: 42rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+}
+
+.note-form  > .form > .title {
+    text-transform: uppercase;
+    color: #417DD8;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.note-form  > .form > span.text {
+    display: block;
+    text-align: justify;
+    margin-bottom: 1.6rem;
+}
+
+.note-form  > .form > .confirm  {
+    margin-top: 3.6rem;
+    text-align: center;
+}
+
+
+.note-form  > .form > .confirm > button.confirm-btn {
+    background-color: #417DD8;
+    border: 2px solid #417DD8;
+    cursor: pointer;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.note-form  > .form > .confirm > button.confirm-btn:hover {
+    background-color: #1c7ed6;
+    color: white;
+}

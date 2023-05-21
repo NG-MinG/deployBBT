@@ -1,0 +1,37 @@
+.analyst_card {
+    padding: 2rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    border-radius: .6rem;
+    width: 22.5rem;
+}
+
+.analyst_card > b {
+    /* text-transform: uppercase; */
+}
+
+.analyst_card > div {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.yellow {
+    background-color: #FFF3BF;
+    color: #B05B00;
+}
+
+.blue {
+    background-color: #D0EBFF;
+    color: #1864AB;
+}
+
+.green {
+    background-color: #C3FAE8;
+    color: #026F4E;
+}
+
+.red {
+    background-color: #FFC9C9;
+    color: #C92A2A;
+}

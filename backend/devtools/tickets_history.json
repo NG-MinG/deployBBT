@@ -1,0 +1,24 @@
+[
+  {
+  "ticket_id":"644eb9ca4dcf764701451a9f",
+  "date": "5/5/2023",
+  "time": "18:54",
+  "departure_city": "Bạc Liêu",
+  "arrival_city": "TP.Hồ Chí Minh",
+  "time_start":"13:30",
+  "date_start":"7/5/2023",
+  "depot_address": "",
+  "payment_method": "visa",
+  "number_of_seats": 2,
+  "chosen_seats": [ "B04", "B05" ],
+  "total_price": 380000,
+  "stage":"Đang xử lí",
+  "guestInfo": {
+    "name": "Khang Dinh",
+    "phoneNumber": "0976975548",
+    "email": "khangduy017@gmail.com",
+    "age": "454",
+    "city": "Cần Thơ"
+    }
+  }
+]

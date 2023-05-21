@@ -1,0 +1,23 @@
+button.create-btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.8rem 1rem;
+    background-color: #417DD8;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    border-color: #417DD8;
+    cursor: pointer;
+}
+
+button.create-btn  > div.content {
+    display: flex;  
+    align-items: center;
+    gap: 1rem;
+}
+
+button.create-btn:hover {
+    background-color: #3384fd;
+}

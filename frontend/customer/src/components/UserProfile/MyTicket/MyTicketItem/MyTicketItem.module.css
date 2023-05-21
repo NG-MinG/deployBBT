@@ -1,0 +1,136 @@
+.MyTicketItem{
+  border-radius: 10px;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.expire{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #000000 ;
+}
+
+.expire-text{
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute;
+  color: #ffffff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.top,.route, .date, .hour{
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  gap: 1rem;
+}
+
+.top{
+  justify-content: space-between;
+  background-color: #083F73;
+  padding: 0.7rem 2rem;
+}
+
+.top p{
+  font-size: 1.7rem;
+}
+
+.content{
+  display: flex;
+  /* justify-content: space-between; */
+  background-color: #e7f5ff;
+  padding: 1.4rem 2rem;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.left,.right{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.left{
+  width: 52rem;
+}
+
+.right{
+  padding-left: 1.5rem;
+}
+
+.content p{
+  font-size: 1.5rem;
+}
+
+.name, .seats, .seatName,.busType{
+  display: flex;
+  align-items: center;
+  color: #083F73;
+  gap: .5rem;
+}
+
+.ticketPickUp{
+  display: flex;
+  color: #083F73;
+  gap: .5rem;
+}
+
+.name p:first-child, .seats p:first-child, .seatName p:first-child, .ticketPickUp p:first-child, .phoneNumber p:first-child, .busType p:first-child{
+  font-weight: 500;
+}
+
+.phoneNumber, .expense{
+  display: flex;
+  align-items: center;
+  color: #083F73;
+  gap: .5rem;
+}
+
+.phoneNumber p:first-child p:first-child{
+  font-weight: 500;
+}
+
+.expense{
+  position: absolute;
+  color: #ff0000;
+  top: 70%;
+  right: 3%;
+  font-weight: 600;
+}
+
+.expense p{
+  font-size: 21px;
+}
+
+/* .cancelButton{
+  cursor: pointer;
+  position: absolute;
+  background-color: #CD3E3E;
+  bottom: 1.5rem;
+  right: 2rem;
+  padding: 0.7rem 0.9rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap:0.5rem;
+  border-radius: 5px;
+} */
+
+.cancelButton:hover{
+  background-color: #b22f2f;
+}
+
+.cancelButton p{
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}

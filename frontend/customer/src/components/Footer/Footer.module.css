@@ -1,0 +1,77 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    border-top: 1px solid #EDEDED;
+}
+
+.footer > .footer_foot {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    padding-bottom: 2.5rem; 
+    background-color: #417DD8;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+    gap: 1.8rem;
+}
+
+.footer > .footer_foot a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer > .footer_foot > strong {
+    text-transform: uppercase;
+} 
+
+.footer > .footer_main {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+}
+
+.footer > .footer_main > .footer_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 20rem;
+}
+
+.footer > .footer_main > .footer_content > .footer_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.footer > .footer_main > .footer_content > strong {
+    font-size: 1.65 rem;
+    font-weight: 600;
+    color: #404040;
+}
+
+.footer > .footer_main > .footer_content > .footer_nav > a { 
+    text-decoration: none;
+    color: #515151;
+    font-size: 1.25rem;
+    line-height: 1.45em;
+}
+
+.footer > .footer_main > .footer_content > .cert {
+    margin-top: -1.5rem;
+}
+
+.footer > .footer_main > .footer_content > .payment_method {
+    display: flex;
+    margin-top: -1.5rem;
+    padding: 0rem 1.5rem;
+}
+
+.footer > .footer_main > .footer_content > .payment_method > img {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+}

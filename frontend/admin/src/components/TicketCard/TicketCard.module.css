@@ -1,0 +1,70 @@
+.ticket_card {
+    border: 1px solid #EEEEEE;
+    border-radius: .5rem;
+    padding: 3rem 3.5rem;
+}
+
+.ticket_card > .ticket_card_heading {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.ticket_card > .ticket_card_heading > .ticket_card_title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #29508B;
+    font-size: 2rem;
+}
+
+.ticket_card > .ticket_card_heading > .ticket_info_time {
+    display: flex;
+    margin-left: auto;
+    gap: .8rem;
+    font-size: 1.5rem;
+    align-items: center;
+    font-weight: 500;
+}
+
+.ticket_card > .ticket_info_details {
+    display: flex;
+}
+
+.ticket_card > .ticket_info_details > .ticket_info_location {
+    display: flex;
+}
+
+.ticket_card > .ticket_info_details > .ticket_info_location > .ticket_info_trips {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ticket_card > .ticket_info_details > .ticket_info_location > .ticket_info_trips > .ticket_info_remaining {
+    font-weight: 500;
+    /* color: #6D6D6D; */
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+}
+
+.ticket_card > .ticket_info_details > .ticket_info_right {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.ticket_card > .ticket_info_details > .ticket_info_right > .ticket_info_bus {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between; 
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: .6rem 0rem;
+}
+
+.ticket_card > .ticket_info_details > .ticket_info_right > .ticket_info_price {
+    text-align: right;
+    color: red;
+    font-size: 2.2rem;
+}

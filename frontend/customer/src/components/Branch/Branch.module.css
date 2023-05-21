@@ -1,0 +1,60 @@
+.Branch{
+  padding-top: 3rem;
+  overflow: hidden;
+}
+
+.main-content{
+  margin: 0 auto;
+  width: 100rem;
+}
+
+.title{
+  color: #417DD8;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.search input{
+  border: 1px solid #417DD8;
+  border-radius: 10px;
+  padding: 1rem 1.8rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  width: 38rem;
+}
+
+.search input:focus{
+  outline: none;
+}
+
+
+.search input::placeholder{
+  color: #A2ABB3;
+}
+
+.table{
+  overflow-y: auto;
+  width: 100%;
+  border: 2px solid #417DD8;
+  height: 69vh;
+  border-radius: 12px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  
+}
+
+.table::-webkit-scrollbar {
+  width: 10px;
+}
+
+.table::-webkit-scrollbar-thumb {
+  background-color: #dddddd;
+  border-radius: 5px;
+}

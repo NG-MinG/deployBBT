@@ -1,0 +1,219 @@
+.ticket {
+    margin: 3.6rem auto;
+    width: 90rem;
+    border-radius: 12px;
+    /* background-color: #fff3bf; */
+    position: relative;
+    border: 2.4px solid #dee2e6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ticket-active {
+    border-color: #417DD8;
+}
+
+.ticket:hover {
+    border: 2.4px solid #417DD8;
+}
+
+
+.quick-description {
+    position: relative;
+    height: 30rem;
+}
+
+
+.time-travel {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    font-size: 1.8rem;
+    display: flex;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.features {
+    position: absolute;
+    right: 2%;
+    top: 10%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.ticket-details {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    padding: 0.5rem 1rem;
+    background-color: #EFF1F2;
+    border-radius: 8px;
+    display: flex;
+    gap: 3.2rem;
+}
+
+.ticket-details > .bus-type,
+.ticket-details > .left-slots {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.location {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    min-width: 30rem;
+}
+
+.location > .departure-place {
+    position: absolute;
+    left: 10%;
+    top: 2%;
+}
+
+.location > .arrival-place {
+    position: absolute;
+    bottom: 6%;
+    left: 10%;
+}
+
+
+.location > .distance {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-60%);
+    font-size: 1.4rem;
+    color: #417DD8;
+    font-weight: 500;
+}
+
+.layout-seat-description {
+    margin: -1rem auto;
+    text-align: center;
+    padding: 2rem 5rem;
+    width: 70rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background-color: #f8f7f7;
+    border: 2px solid #CED4DA;
+    color: #417DD8;
+}
+
+.layout-seat {
+    margin: 0 auto;
+    width: 70rem;   
+    /* background-color: red; */
+    margin: 3.6rem auto;
+    border: 2px solid #CED4DA;
+    border-radius: 8px;
+    padding-bottom: 4rem;
+}
+
+.layout-seat-title {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0rem;
+    border: 2px solid #CED4DA;
+    width: 100%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 8px;
+}
+
+
+.layout-seat-title > .below, .layout-seat-title > .above {
+    width: 28rem;
+    text-align: center;
+    padding: 2rem 0rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #417DD8;
+    /* background-color: yellow; */
+    text-transform: uppercase;
+}
+
+.layout-seat > .seat-tables {
+    margin: 0 auto;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    display: flex;
+}
+
+.layout-seat > .seat-tables > .seat-table-container {
+    width: 10rem;   
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.seat-table {
+    padding: 0;
+    width: 100%;
+    padding: 3rem;
+}
+
+td.empty-seat-space {
+    visibility: hidden;
+}
+
+.seat-table > tbody > tr > td {
+    text-align: center;
+}
+
+div.layout-seat > div.notes {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: red; */
+    width: 50rem;
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+div.layout-seat > div.notes > div.status {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+div.layout-seat > div.notes > div.status > span.description {
+    font-size: 1.4rem;
+}
+
+div.calculation {
+    margin: 5rem 10rem 5rem;
+    font-size: 1.8rem;
+    min-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+button.continue-btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    border-radius: 25px;
+    padding: 1rem 12rem;
+    border: 2.4px solid #417DD8;
+    background-color: #417DD8;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+button.continue-btn:hover {
+    background-color: #fff;
+    color: #417DD8;
+    font-weight: 500;
+}

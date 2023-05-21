@@ -1,0 +1,68 @@
+.activities {
+    display: flex;
+    flex-direction: column;    
+}
+
+.activities > .header {
+    text-transform: uppercase;
+    background-color: #083F73;
+    color: white; 
+    padding: 1.5rem 2rem;
+}
+
+.activities > .main_content {
+    max-height: 45.3rem;
+    overflow: auto;
+}
+
+.activities > .main_content > .sub_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.activities > .main_content > .sub_item:nth-child(odd) {
+    background-color: #E7F5FF;
+}
+
+.activities > .main_content > .sub_item > .details {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: .3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.activities > .main_content > .sub_item > .details > b {
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
+}
+
+.activities > .main_content > .sub_item > .control {
+    align-self: flex-end;
+    padding: 1.5rem 2rem;
+}
+
+.activities > .main_content > .sub_item > .control > button {
+    border: none;
+    background-color: #12B886;
+    color: white;
+    font-weight: 600;
+    min-width: 12rem;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    padding: 1.3rem 2.5rem;
+    line-height: 1em;
+}
+
+.activities > .main_content > .sub_item > .control > button.processing {
+    background-color: #D2712B;
+}
+
+.activities > .main_content > .sub_item > .control > button.canceled {
+    background-color: #C92A2A;
+}
+
+.activities .chart {
+    width: 100%;
+}

@@ -1,0 +1,39 @@
+.wrapper {
+    border: 2px solid #ededed;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 40rem;
+    padding: 1.6rem;
+    height: 6.5rem;
+}
+
+.wrapper > span.text {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #adb5bd;
+}
+
+
+
+.wrapper > select.choose-place {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #d7d7d7;
+    border-radius: 8px;
+    padding: 1rem;
+    outline: none;
+}
+
+.wrapper > select#choose-place > option {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.active-text {
+    color: #646464 !important;
+}
+
+.active-border {
+    border: 2px solid #46A7ED;
+}

@@ -1,0 +1,150 @@
+.route-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.date {
+    font-size: 2rem;
+    margin-top: 1.2rem;
+}
+
+
+.step-line-container {
+    margin-top: 6rem;   
+    width: 100%;
+    /* background-color: #fff4e6; */
+    display: flex;
+    gap: 6.4rem;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.step-block {
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 14rem;
+}
+
+.step-block:nth-child(1), .step-block:nth-child(4)
+{
+    margin-top: 2.2rem;
+}
+
+.step-block  div.text {
+    font-size: 1.2rem;
+}
+
+.step-block > .current-step, 
+.step-block > .next-step, 
+.step-block > .empty-step
+{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2.4rem;
+    position: relative;
+}
+
+.step-block > .current-step {
+    border: 2px solid #417DD8;
+    background-color: #417DD8;
+}
+
+.step-block > .next-step {
+    border: 2px solid #417DD8;
+    background-color: #fff;
+}
+
+.step-block > .empty-step {
+    border: 2px solid #DEE2E6;
+    background-color: #DEE2E6;
+}
+
+.step-block > .current-step > .text,
+.step-block > .next-step > .text,
+.step-block > .empty-step > .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -59%);
+    color: #fff;
+    font-weight:700;
+}
+
+.step-block > .next-step > .text {
+    color: #417DD8;
+}
+
+.step-block > .empty-step > .text {
+    color: #637280;
+}
+
+.step-block > .title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    max-width: 14rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.active-title {
+    color: #417DD8;
+}
+
+.inactive-title {
+    color: #637280;
+}
+
+.current-line {
+    position: absolute;
+    height: 6px;   
+    left: 8.55rem;
+    bottom: 1.5rem;
+    min-width: 37.5rem;
+    background-color: #417DD8;
+}
+
+.empty-line-1 {
+    position: absolute;
+    height: 6px;   
+    left: 49.90rem;
+    bottom: 1.5rem;
+    min-width: 37.8rem;
+    background-color: #DEE2E6;
+}
+
+.empty-line-2 {
+    position: absolute;
+    height: 6px;   
+    /* left: 90.41rem; */
+    left: 90.77rem;
+    bottom: 1.5rem;
+    /* min-width: 38.8rem; */
+    min-width: 37.8rem;
+    background-color: #DEE2E6;
+}
+
+.current-line-2 {
+    position: absolute;
+    height: 6px;   
+    left: 48.90rem;
+    bottom: 1.5rem;
+    min-width: 38.1rem;
+    background-color: #417DD8;
+}
+
+.current-line-3 {
+    position: absolute;
+    height: 6px;   
+    /* left: 90.41rem; */
+    left: 90.6rem;
+    bottom: 1.5rem;
+    /* min-width: 38.8rem; */
+    min-width: 37.3rem;
+    background-color: #417DD8;
+}

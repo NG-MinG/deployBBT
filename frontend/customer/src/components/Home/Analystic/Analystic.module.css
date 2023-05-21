@@ -1,0 +1,122 @@
+.analys_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.analys_container > .analys_header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+}
+
+.analys_container > .analys_header > .line {
+    width: 40rem;
+    height: .2rem;
+    background: #417DD8;
+    z-index: -1;
+}
+
+.analys_container > .analys_header > .analys_heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.analys_container > .analys_header > .analys_heading > h1 {
+    text-transform: uppercase;
+    color: #417DD8;
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.analys_container > .analys_header > .analys_heading > .analys_des {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.3rem;
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #555555;
+}
+
+.analys_container > .analys_header > .analys_heading > .analys_des > svg {
+    font-size: 3.5rem;
+}
+
+.analys_container > .analys_main {
+    display: flex;
+    text-align: center;
+    align-items: stretch;
+    color: white;
+}
+
+.analys_container > .analys_main > .main_item {
+    display: flex;
+    width: 35vw;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #4DABF7;
+    color: white;
+    font-size: 5rem;
+    padding: 4.8rem;
+}
+
+.analys_container > .analys_main > .main_item > svg {
+    display: block;
+    font-size: 10rem;
+    margin-bottom: .5rem;
+}
+
+.analys_container > .analys_main > .main_item > .main_item_details {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.analys_container > .analys_main > .sub_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70vw;
+    background-color: #083F73;
+    padding: 3rem 0rem;
+}
+
+.analys_container > .analys_main > .sub_wrapper > .sub_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 4rem;
+    width: 45%;
+}
+
+.analys_container > .analys_main > .sub_wrapper > .sub_item > .analys_number {
+    display: flex;
+    align-items: center;
+    font-size: 2.8rem;
+    gap: 2rem;
+}
+
+.analys_container > .analys_main > .sub_wrapper > .sub_item:nth-child(even) > .analys_number {
+    flex-direction: row-reverse;
+}
+
+.analys_container > .analys_main > .sub_wrapper > .sub_item > .analys_number > svg {
+    font-size: 5rem;
+    display: block;
+}
+
+.analys_container > .analys_main > .sub_wrapper > .sub_item > .analys_details {
+    font-weight: 600;
+    max-width: 22rem;
+    font-size: 1.4rem;
+    line-height: 1.3em;
+}

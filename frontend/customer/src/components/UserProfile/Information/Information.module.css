@@ -1,0 +1,38 @@
+.Information{
+  width: 75rem;
+  height: 39rem;
+  border-radius: 12px;
+  border: 3px solid #417DD8;
+  margin: 0 auto;
+  padding: 6rem;
+  display: flex;
+  gap:1rem;
+  position: relative;
+}
+
+.title,.content{
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
+}
+p{
+  font-size: 16px;
+  margin: 0;
+}
+.title p{
+  font-weight: 500;
+}
+
+.avatar{
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  top: 12%;
+  right: 10%;
+  border: 3px solid #417DD8;
+}
+
+.avatar img{
+  width: 100%;
+}

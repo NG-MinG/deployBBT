@@ -1,0 +1,91 @@
+.ManageTicketOrderEdit{
+  padding: 3rem 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+.main{
+  width: 100%;
+  min-height: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  margin-bottom: 2rem;
+}
+
+.information{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  font-size: 1.5rem;
+}
+
+.ManageTicketOrderEdit p{
+  margin: 0;
+}
+
+.ManageTicketOrderEdit .save{
+  border: none;
+  border-radius: 3px;
+  padding: .4rem 2.4rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color:#417DD8;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.information-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  margin-bottom: 3rem;
+}
+
+.information-item input{
+  width: 40rem !important;
+}
+
+.layout-seat {
+  width: 50%;
+  border: 2px solid #CED4DA;
+  border-radius: 8px;
+  /* padding-bottom: 4rem; */
+  /* box-sizing: border-box; */
+  /* background-color: yellow; */
+  /* padding-top: 2.4rem; */
+}
+
+
+div.layout-seat > div.notes {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: red; */
+  width: 50rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+div.layout-seat > div.notes > div.status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+div.layout-seat > div.notes > div.status > span.description {
+  font-size: 1.4rem;
+}
+
+

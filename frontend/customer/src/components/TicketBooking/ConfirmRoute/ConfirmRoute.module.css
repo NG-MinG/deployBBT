@@ -1,0 +1,269 @@
+.nav-bar {
+    height: 7rem;
+    width: 100%;
+    background-color: burlywood;
+}
+
+.main-content {
+    margin: 0 auto;
+    margin-top: 4.6rem;
+    width: 90%;
+}
+
+
+.ticket {
+    margin: 3.6rem auto 0rem;
+    width: 70rem;
+    border-radius: 12px;
+    /* background-color: #fff3bf; */
+    position: relative;
+    border: 2px solid #dee2e6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ticket-active {
+    border-color: #417DD8;
+}
+
+
+.quick-description {
+    position: relative;
+    height: 25rem;
+}
+
+
+.confirm-route-title {
+    font-size: 2rem;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    font-weight: 700;
+    color: #417DD8;
+    text-transform: uppercase;
+}
+
+.time-travel {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    font-size: 1.8rem;
+    display: flex;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.features {
+    position: absolute;
+    right: 2%;
+    top: 10%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.ticket-details {
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    padding: 0.5rem 1rem;
+    background-color: #EFF1F2;
+    border-radius: 8px;
+    display: flex;
+    gap: 3.2rem;
+}
+
+.ticket-details > .bus-type,
+.ticket-details > .left-slots {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.location {
+    position: absolute;
+    top: 45%;
+    left: 3%;
+    min-width: 30rem;
+}
+
+.location > .departure-place {
+    position: absolute;
+    left: 10%;
+    top: 2%;
+}
+
+.location > .arrival-place {
+    position: absolute;
+    bottom: 6%;
+    left: 10%;
+}
+
+
+.location > .distance {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-60%);
+    font-size: 1.4rem;
+    color: #417DD8;
+    font-weight: 500;
+}
+
+
+
+.chosen-seats > .seats {
+    margin: 2rem auto 0rem;
+    padding: 1rem 2rem 2rem;
+    border: 2px solid #417DD8;
+    border-radius: 8px 8px 0px 0px;
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: relative;
+    cursor: pointer;
+    border-bottom-color: #dde2e8;
+}
+
+.chosen-seats > .seats > .title {
+    font-size: 1.8rem;
+    color: #417DD8;
+    font-weight: 500;
+}
+
+
+.chosen-seats > .seats > .list-seats {
+    font-weight: 500;
+}
+
+
+.chosen-seats > .seats > span.watch-btn {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chosen-depot > .depot {
+    margin: 0rem auto;
+    padding: 1.4rem 2.5rem 2.5rem;
+    border: 2px solid #417DD8;
+    border-radius: 0px 0px 8px 8px;
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: relative;
+    cursor: pointer;
+    /* background-color: red; */
+    border-top-color: #dde2e8;
+}
+
+.chosen-depot > .depot > .title {
+    font-size: 1.8rem;
+    color: #417DD8;
+    font-weight: 500;
+}
+
+
+.chosen-depot > .depot > select.list-depots {
+    font-family: 'Montserrat';
+    outline: none;
+    padding: 1.2rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    /* width: 70%; */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("../../../assets/svg/TicketBooking/down_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+}
+
+.chosen-depot > .depot > select.list-depots > option {
+    font-family: 'Montserrat', sans-serif;  
+    max-width: 20rem;
+}
+
+.main-content > .border-line-spacing {
+    margin: 0 auto;
+    width: 70rem;   
+    height: 0.8rem;
+    background-color: #f7f7f7;
+    border-left: 2px solid #417DD8;
+    border-right: 2px solid #417DD8;
+}
+
+.btn-wrapper {
+    margin: 3.6rem auto;
+    width: 70rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btn-wrapper > button {
+    width: 25rem;   
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-wrapper > .back-to-previous  {
+    background-color: white;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.btn-wrapper > .back-to-previous:hover  {
+    border: 2px solid #417DD8;
+    background-color: #417DD8;
+}
+
+.btn-wrapper > .back-to-previous:hover  > span.content {
+    color: #fff;
+}
+
+.btn-wrapper > .back-to-previous:hover svg.back-icon path{
+    fill: #fff;
+}
+
+.btn-wrapper > .continue  {
+    background-color: #417DD8;
+    border: 2px solid #417DD8;
+    cursor: pointer;
+}
+
+.btn-wrapper > .continue:hover  {
+    background-color: #1b6bb6;
+    /* color: #417DD8; */
+}
+/* 
+.btn-wrapper > .continue:hover  > span.content {
+    color: #417DD8;
+}
+
+.btn-wrapper > .continue:hover svg.next-icon path{
+    fill: #417DD8;
+} */
+
+
+
+.btn-wrapper > .continue > span.content {
+    color: #fff;
+}
+
+/* .btn-wrapper > .continue > span.content:hover {
+    color: #417DD8;
+}
+  */
+.back-icon, .next-icon {
+    font-size: 0.65em;
+}

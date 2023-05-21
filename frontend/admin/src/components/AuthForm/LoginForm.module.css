@@ -1,0 +1,193 @@
+
+@-webkit-keyframes showForm {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes showForm {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+.login_form_backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: #F3F3F3;
+    -webkit-animation: showBackdrop .35s ease-in-out;
+            animation: showBackdrop .35s ease-in-out;
+}
+
+.login_form {
+    position: relative;
+    width: 55rem;
+    background-color: white;
+    border-radius: 1rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0rem 0rem .5rem 0rem rgba(0, 0, 0, 0.2);
+    z-index: 13;
+    translate: -50% -50%;
+    -webkit-animation: showForm .35s ease-in-out;
+            animation: showForm .35s ease-in-out;
+    overflow: hidden;
+}
+
+.login_form > .login_form_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+    padding-bottom: 1.5rem;
+    color: #083F73;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.login_form > .login_form_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 3rem 2rem;
+    padding-bottom: 0rem;
+    width: 35rem;
+    margin: auto;
+    margin-bottom: 2.8rem;
+    overflow: hidden;
+}
+
+.login_form > .login_form_footer {
+    padding: 4rem 2rem;
+    padding-top: 0rem;
+    overflow: hidden;
+}
+
+.login_form > .login_form_footer > strong {
+    display: block;
+    margin: auto;
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: 30rem;
+    text-align: justify;
+    padding-top: 0;
+    font-weight: 500;
+    color: #c53333;
+}
+
+.login_form > .close_btn {
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    line-height: 1em;
+    padding: .5rem .8rem;
+    right: .8rem;
+    top: 1rem;
+    transition: all .25s ease-in-out;
+}
+
+.login_form > .close_btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.login_form > .login_form_main > .error_message {
+    color: #c53333;
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.login_form > .login_form_main > .login_group {
+    display: flex;
+    gap: .9rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login_form > .login_form_main > .login_group_checkbox {
+    display: flex;
+    gap: .3rem;
+    font-size: 1.2rem;
+    line-height: 1em;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.login_form > .login_form_main > .login_group > b {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.login_form > .login_form_main > .resend_group {
+    font-size: 1.2rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.login_form > .login_form_main > .resend_group > a {
+    color: blue;
+    font-weight: 600;
+}
+
+.login_form > .login_form_main > .login_group > input[type="text"],
+.login_form > .login_form_main > .login_group > input[type="password"] {
+    border: 1px solid lightgray;
+    padding: .8rem 1rem;
+    border-radius: .5rem;
+    outline: none;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.login_form > .login_form_main > .login_group > input[type="text"]::-webkit-input-placeholder, .login_form > .login_form_main > .login_group > input[type="password"]::-webkit-input-placeholder {
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.login_form > .login_form_main > .login_group > input[type="text"]:-ms-input-placeholder, .login_form > .login_form_main > .login_group > input[type="password"]:-ms-input-placeholder {
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.login_form > .login_form_main > .login_group > input[type="text"]::-ms-input-placeholder, .login_form > .login_form_main > .login_group > input[type="password"]::-ms-input-placeholder {
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.login_form > .login_form_main > .login_group > input[type="text"]::placeholder,
+.login_form > .login_form_main > .login_group > input[type="password"]::placeholder {
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.login_form > .login_form_main > .submit_btn {
+    width: 100%;
+    padding: .8rem;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    outline: none;
+}

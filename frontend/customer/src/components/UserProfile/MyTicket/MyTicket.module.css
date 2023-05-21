@@ -1,0 +1,14 @@
+.MyTicket{
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+.listTicket{
+  width: 80rem;
+  height: 70rem;
+  /* background-color: aqua; */
+  margin: 0 auto;
+  overflow: auto;
+  padding-right: 0.9rem;
+}
+

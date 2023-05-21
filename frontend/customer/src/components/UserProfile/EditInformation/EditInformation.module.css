@@ -1,0 +1,110 @@
+.EditInformation{
+  width: 75rem;
+  height: 39rem;
+  border-radius: 12px;
+  border: 3px solid #417DD8;
+  margin: 0 auto;
+  padding: 6rem;
+  display: flex;
+  gap:1rem;
+  position: relative;
+}
+
+.title,.content{
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
+}
+
+.content{
+  margin-top: -0.2rem;
+  gap:2.35rem;
+}
+.EditInformation p{
+  font-size: 16px;
+  margin: 0;
+}
+.content p{
+  font-weight: 500;
+}
+
+.content input{
+  width: 26rem;
+  padding: .4rem .5rem;
+  border: 1px solid #646464;
+  border-radius: 3px;
+  font-family: "Montserrat"
+}
+
+.content input:focus{
+  outline: none;
+}
+
+.avatar{
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  top: 12%;
+  right: 10%;
+  border: 3px solid #417DD8;
+}
+
+.avatar img{
+  width: 100%;
+  position: relative;
+}
+
+.addIcon{
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.EditInformation button{
+  position: absolute;
+  top:78%;
+  right: 16%;
+  background-color: #083F73;
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 8rem;
+  height: 2.6rem;
+  cursor: pointer;
+}
+
+.EditInformation button:hover{
+  background-color: #0a355f;
+}
+
+.error{
+  position: absolute;
+  font-size: 12px !important;
+  width: 24rem;
+  top:87%;
+  right: 5%;
+  text-align: center;
+  color: red;
+  /* background-color: yellow; */
+}
+
+.success{
+  position: absolute;
+  font-size: 12px !important;
+  width: 24rem;
+  top:87%;
+  right: 5%;
+  text-align: center;
+  color:green;
+}
+

@@ -1,0 +1,20 @@
+div.seat {
+    position: relative;
+}
+
+div.seat > .seat-icon {
+    font-size: 3em;
+}
+
+div.seat > span.seat-id {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+}
+
+.unclickable  {
+    pointer-events: visiblePainted;
+}

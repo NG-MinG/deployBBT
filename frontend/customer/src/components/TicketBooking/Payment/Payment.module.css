@@ -1,0 +1,390 @@
+.nav-bar {
+    height: 7rem;
+    width: 100%;
+    background-color: burlywood;
+}
+
+.main-content {
+    margin: 0 auto;
+    margin-top: 4.6rem;
+    width: 90%;
+}
+
+
+
+.btn-wrapper {
+    margin: 3.6rem auto;
+    width: 70rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btn-wrapper > button {
+    width: 25rem;   
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-wrapper > .back-to-previous  {
+    background-color: white;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.btn-wrapper > .back-to-previous:hover  {
+    border: 2px solid #417DD8;
+    background-color: #417DD8;
+}
+
+.btn-wrapper > .back-to-previous:hover  > span.content {
+    color: #fff;
+}
+
+.btn-wrapper > .back-to-previous:hover svg.back-icon path{
+    fill: #fff;
+}
+
+.btn-wrapper > .continue  {
+    background-color: #417DD8;
+    border: 2px solid #417DD8;
+    cursor: pointer;
+}
+
+.btn-wrapper > .continue:hover  {
+    background-color: #1b6bb6;
+    /* color: #417DD8; */
+}
+/* 
+.btn-wrapper > .continue:hover  > span.content {
+    color: #417DD8;
+}
+
+.btn-wrapper > .continue:hover svg.next-icon path{
+    fill: #417DD8;
+} */
+
+
+
+.btn-wrapper > .continue > span.content {
+    color: #fff;
+}
+
+/* .btn-wrapper > .continue > span.content:hover {
+    color: #417DD8;
+}
+  */
+.back-icon, .next-icon {
+    font-size: 0.65em;
+}
+
+.main-content > div.ticket-information {
+    /* background-color: aliceblue; */
+    width: 80rem;
+    margin: 0rem auto;
+    margin-top: 6rem;
+}
+
+.main-content > div.ticket-information > div.title {
+    background-color: #417DD8;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.main-content > div.ticket-information > div.guest-info-label,
+.main-content > div.ticket-information > div.route-info-label  {
+    background-color: #f6f6f6;
+    padding: 0.6rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    border: 1px solid #ADB5BD;
+}
+
+
+.main-content > div.ticket-information > div.guest-info {
+    /* background-color: #1b6bb6; */
+    padding: 2rem;
+    border: 1px solid #ADB5BD;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+
+.main-content > div.ticket-information > div.guest-info > div.name-info {
+    display: flex;
+    gap: 13rem;
+    margin-bottom: 1rem;
+}
+
+
+.main-content > div.ticket-information > div.guest-info > div.phone-info {
+    display: flex;
+    gap: 8rem;
+    margin-bottom: 1rem;
+}
+
+
+.main-content > div.ticket-information > div.guest-info > div.email-info {
+    display: flex;
+    gap: 14rem;
+    margin-bottom: 1rem;
+}
+
+.right-arrow-icon {
+    font-size: 0.8em;
+}
+
+.route-info-label > .route {
+    margin-left: 1rem;
+}
+
+.route-info-label > .route > span {
+    margin-left: 1rem;
+}
+
+.route-info  {
+    display: flex;
+    padding: 2rem;
+    gap: 3rem;
+    border: 1px solid #ADB5BD;
+    border-top: 0px;
+}
+
+.route-info > .route-info-gr-1 {
+    /* background-color: red; */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+.route-info > .route-info-gr-1 > .route,
+.route-info > .route-info-gr-1 > .time,
+.route-info > .route-info-gr-1 > .arrival-depot {
+    display: flex;
+    gap: 6rem;
+}
+
+
+.route-info > .route-info-gr-1 > .time > .time-info {
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+    color: #417DD8;
+}
+
+.route-info > .route-info-gr-1 > .arrival-depot > span.label {
+    min-width: 10rem;
+}
+.route-info > .route-info-gr-1 > .arrival-depot > span.depot {
+    margin-left: -2.4rem;
+}
+
+
+.route-info > .route-info-gr-2 {
+    width: 40%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.route-info > .route-info-gr-2 > .number-of-seats {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.route-info > .route-info-gr-2 > .chosen-seats {
+    display: flex;
+    gap: 1rem;
+}
+
+.route-info > .route-info-gr-2 > .chosen-seats > .seats-id {
+    font-weight: 600;
+    color: #417DD8;
+}
+
+div.total-price {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: #f6f6f6; 
+    border: 1px solid #ADB5BD;
+    border-top: 0px;
+}
+
+
+div.total-price > .label,
+div.total-price > .price {
+    font-weight: 400;
+    font-size: 2.4rem;
+    background-color: #f6f6f6;
+}
+
+div.total-price > .price {
+    font-weight: 500;
+    font-size: 2rem;
+    color: red;    
+}
+
+.payment-title {
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 70rem;
+    text-align: center;
+    /* background-color: red; */
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #417DD8;
+    font-weight: 600;
+}
+
+
+div.payment-methods-wrapper {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+    /* background-color: aqua; */
+    align-self: center;
+}
+
+div.payment-methods {
+    display: flex;
+    gap: 6rem;
+}
+
+div.payment-methods > div {
+    padding: 1rem 0rem;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 13rem;
+    height: 11rem;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #c9c9c9;
+}
+
+div.payment-methods > div:hover {
+    border: 2px solid #4A92BA;
+}
+
+div.payment-methods > div > span.text 
+{
+    color: #858585;
+    font-weight: 600;
+}
+
+.payment-active {
+    border: 2px solid #4A92BA !important;
+    background-color: #f5f9ff !important;
+}
+
+div.payment-methods > div > span.text-active {
+    color: #4A92BA;
+    font-weight: 600;
+}
+
+
+
+.confirm-form {
+    position: relative;
+}
+
+.confirm-form  > .form {
+    z-index: 3;
+    position: fixed;
+    width: 60rem; 
+    height: 24rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+}
+
+.confirm-form  > .form > .title {
+    text-transform: uppercase;
+    color: #417DD8;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.confirm-form  > .form > .green-tick-icon {
+    font-size: 3.5em;
+    text-align: center;
+}
+
+
+.confirm-form  > .form > .confirm  {
+    margin-top: 1.6rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.confirm-form  > .form > .confirm > button.confirm-btn {
+    background-color: #417DD8;
+    border: 2px solid #417DD8;
+    cursor: pointer;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.confirm-form  > .form > .confirm > button.confirm-btn:hover {
+    background-color: #1c7ed6;
+    color: white;
+}
+
+
+.confirm-form  > .form > .confirm  > button.back-to-previous  {
+    background-color: white;
+    border: 2px solid #333;
+    cursor: pointer;
+    width: 25rem;   
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.confirm-form  > .form > .confirm  > button.back-to-previous:hover  {
+    border: 2px solid #417DD8;
+    background-color: #417DD8;
+}
+.confirm-form  > .form > .confirm > button.back-to-previous:hover  > span.content {
+    color: #fff;
+}
+
+.confirm-form  > .form > .confirm > button.back-to-previous:hover svg.back-icon path {
+    fill: #fff;
+}

@@ -1,0 +1,160 @@
+
+div.table-section {
+    width: 90%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+div.table-container {
+    max-height: 40rem;
+    overflow: auto;
+}
+
+div.table-container::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+}
+  
+div.table-container::-webkit-scrollbar-thumb {
+    background: #e0e0e0; /* color of the thumb */
+    border-radius: 10px; /* rounded corners of the thumb */
+}
+  
+div.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+div.table-container > table.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+div.table-container > table.ticket-table > thead {
+    background-color: #417DD8;
+    height: 5rem;
+    border: 2px solid transparent; 
+    /* to make thead fixed when overflow situation */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+div.table-container > table.ticket-table > thead{
+   
+}
+
+
+div.table-container > table.ticket-table > thead > tr > th {
+    text-align: left;
+    /* padding-left: 1.5rem; */
+    padding-left: 1.15rem;
+}
+
+div.table-container > table.ticket-table > thead > tr > th:first-child {
+    border-radius: 5px 0px 0px 0px;
+}
+
+div.table-container > table.ticket-table > thead > tr > th:last-child {
+    border-radius: 0px 5px 0px 0px;
+}
+
+div.table-container > table.ticket-table > thead > tr > th:nth-last-child(1),
+div.table-container > table.ticket-table > thead > tr > th:nth-last-child(2) {
+  width: 4rem; 
+  /* background-color: red; */
+}
+
+/*  custom arrow of select */
+.select-custom {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url('../../../assets/svg/ManageTicket/white_down_arrow.svg');
+    /* background-position: 70% 65%; */
+    background-position: 100% 55%;
+    background-repeat: no-repeat;
+}
+
+div.table-container > table.ticket-table > thead > tr > th > select {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    /* background-color: rebeccapurple; */
+}
+
+
+/* div.table-container > table.ticket-table > thead > tr > th > select.select-custom:first-child {
+    width: 40%;
+} */
+
+/* div.table-container > table.ticket-table > thead > tr > th:first-child > select {
+    width: 45%;
+}
+
+div.table-container > table.ticket-table > thead > tr > th:nth-child(2) > select {
+    width: 70%;
+}
+
+div.table-container > table.ticket-table > thead > tr > th:nth-child(3) > select {
+    width: 87%;
+}
+
+div.table-container > table.ticket-table > thead > tr > th:nth-child(4) > select {
+    width: 75%;
+}
+
+div.table-container > table.ticket-table > thead > tr > th:nth-child(5) > select {
+    width: 76%;
+}  */
+
+div.table-container > table.ticket-table > thead > tr > th > select > option {
+    color: black;
+}
+
+div.table-container > table.ticket-table > tbody > tr  > td {
+    /* text-align: center; */
+    padding: 1rem 0rem 1rem 1.6rem;
+    /* padding-left: 1.6rem; */
+    font-size: 1.6rem;
+}
+
+
+div.table-container > table.ticket-table > tbody > tr > td:nth-last-child(1),
+div.table-container > table.ticket-table > tbody > tr > td:nth-last-child(2)
+{
+    padding-left: 0;
+}
+/* div.table-container > table.ticket-table > tbody > tr  > td.date-time {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    vertical-align: center;
+} */
+
+div.table-container > table.ticket-table > tbody > tr  > td.date-time  > span {
+}
+
+
+div.table-container > table.ticket-table > tbody > tr {
+    border: 0.4px solid #EDEDED;
+}
+
+div.table-container > table.ticket-table > tbody > tr:nth-child(odd) {
+    background-color: white;
+}
+
+div.table-container > table.ticket-table > tbody > tr:nth-child(even) {
+    background-color: #F5F9FF;
+}
+
+
+
+div.table-container > table.ticket-table > tbody > tr > td.crud > button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}

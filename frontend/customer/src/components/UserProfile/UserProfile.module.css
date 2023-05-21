@@ -1,0 +1,52 @@
+.UserProfile{
+  display: flex;
+  padding: 6rem 12rem;
+  padding-right: 0;
+  padding-bottom: 0;
+  /* overflow: hidden; */
+}
+
+.menu{
+  /* background-color: aqua; */
+  width: 31rem;
+}
+
+.item{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  /* background-color: yellow; */
+  width: fit-content;
+  margin-bottom: 2.6rem;
+  padding:.5rem;
+  cursor: pointer;
+}
+
+.item:hover p,
+.item:hover svg path{
+  fill: #083F73;
+  color: #083F73;
+} 
+
+.item > p{
+  color: #417DD8;
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chosen .icon{
+  color: #083F73 !important;
+}
+
+.chosen p{
+  color: #083F73;
+}
+
+.content{
+  width: 100%;
+  /* background-color: #b8c4d6; */
+  height: 85vh;
+  overflow: auto;
+}

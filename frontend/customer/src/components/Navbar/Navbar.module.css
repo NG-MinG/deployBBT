@@ -1,0 +1,157 @@
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar .link {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    color: #417DD8;
+    padding: 2rem 1.9rem;
+    transition: all .2s ease;
+}
+
+.navbar .link:hover {
+    color: #0b58a0;
+}
+
+.navbar .link.active {
+    color: #083F73;
+}
+
+.navbar > .title {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-left: 3.6rem;
+}
+
+.navbar > .main, 
+.navbar > .foot {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar > .foot {
+    margin-left: auto;
+    margin-right: 2rem;
+    gap: 1.5rem;
+}
+
+.navbar > .foot > .contact_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar > .foot > .contact_btn > .phoneIcon {
+    font-size: 1.3em;
+    line-height: 1em;
+}
+
+.navbar > .foot > .user-dropdown > .avatar {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+}
+
+.navbar > .foot > .user-dropdown {
+    position: relative;
+    margin-left: 4rem;
+}
+
+.navbar > .foot > .user-dropdown .no-avatar { 
+    font-size: 4rem;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list { 
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: .5rem 0rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .15s ease-in-out;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box {
+    width: 26rem;
+    border-radius: .5rem;
+    padding: 1.5rem 1rem;
+    background-color: white;
+    box-shadow: 0rem 0rem .4rem 0rem rgba(0, 0, 0, .15);
+}
+
+.navbar > .foot > .user-dropdown:hover > .user-dropdown-list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box hr {
+    width: 80%;
+    margin: auto;
+    border: none;   
+    border-top: 1px solid lightgray;
+    margin-bottom: .5rem;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box > .link.user-details { 
+    padding-bottom: 1.5rem;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box > .link.user-details > .no-avatar {
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box > .link.user-details > .name {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box > .link {
+    padding: .8rem 2.5rem;
+    color: #535353;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box > .link i:first-child {
+    font-size: 1.6rem;
+    overflow: hidden;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box > .link > span {
+    margin-right: auto;
+}
+
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box > .link:hover,
+.navbar > .foot > .user-dropdown > .user-dropdown-list > .user-box > .link:hover i {
+    color: #083F73;
+}
