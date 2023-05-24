@@ -10,7 +10,7 @@ const getAnalyst = catchAsync(async (req, res, next) => {
     const total_price = listHistory.reduce((total, history) => total + history.total_price, 0);
     const total_bus_type = Array.from(new Set(listHistory.map(el => el.bus_type.toLowerCase()))).length;
     const total_customer = Array.from(new Set(listHistory.map(el => el.guestInfo.phoneNumber.trim()))).length;
-    const total_ticket = listHistory.reduce((total, history) => total + (history.stage !== 'Đã huỷ') ? (history.chosen_seats.length) : 0, 0);
+    const total_ticket = listHistory.reduce((total, history) => total + history.chosen_seats.length, 0);
     // const total_ticket = listHistory.length;
 
     res.status(200).json({

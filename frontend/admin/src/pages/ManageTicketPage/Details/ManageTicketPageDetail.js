@@ -28,8 +28,11 @@ const ManageTicketPageDetail = () => {
         .then((res) => {
             setTicket(res.data.ticket);
             setTicketHistory(res.data.ticketHistory);
+            // console.log(res.data.ticket);   
+            console.log(res.data.ticketHistory);   
         })
         .catch(err => console.log(err));
+
     
     }, [ticketId]);
 
@@ -40,7 +43,7 @@ const ManageTicketPageDetail = () => {
     const num_cus = Array.from(new Set(ticketHistory.map(el => el.guestInfo.phoneNumber.trim()))).length;
     const customers = num_cus >= 0 ? num_cus < 10 ? `0${num_cus}` : num_cus : '--';
 
-    const num_postpone = ticketHistory.filter(el => el.stage.toLowerCase().indexOf('đã huỷ')).length;
+    const num_postpone = ticketHistory.filter(el => el.stage.toLowerCase().indexOf('đã huỷ') >= 0).length;
     const postpones = num_postpone >= 0 ? num_postpone < 10 ? `0${num_postpone}` : num_postpone : '--';
 
     console.log(chooseTicket);

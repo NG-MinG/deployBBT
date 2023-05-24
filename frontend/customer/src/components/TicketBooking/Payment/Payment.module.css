@@ -112,6 +112,12 @@
     border: 1px solid #ADB5BD;
 }
 
+.main-content > div.ticket-information > div.border-top-none {
+    border-top: none;
+}
+
+
+
 
 .main-content > div.ticket-information > div.guest-info {
     /* background-color: #1b6bb6; */

@@ -16,7 +16,8 @@ const getAll = catchAsync(async (req, res) => {
 const getBySearch = catchAsync(async (req, res) => {
   const search = req.body.search.toLowerCase()
   const ticket_history_filter = []
-  const ticket_history = await TicketHistory.find()
+  const ticket_ = await TicketHistory.find()
+  const ticket_history = ticket_.reverse()
   for (let i of ticket_history) {
 
     if (i.guestInfo.name.toLowerCase().includes(search) || i.guestInfo.phoneNumber.includes(search) || i.departure_city.toLowerCase().includes(search) || i.arrival_city.toLowerCase().includes(search)) {

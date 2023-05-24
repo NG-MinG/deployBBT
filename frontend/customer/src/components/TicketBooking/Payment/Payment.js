@@ -11,7 +11,7 @@ import Visa from "../../../assets/images/Payment/Visa.png"
 import Zalopay from "../../../assets/images/Payment/Zalopay.png"
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setTicketBookingDetails } from "../../../store/reducers/ticketBookingSlice";
+import { setTicketBookingDetails, setReturnTicketBookingDetails } from "../../../store/reducers/ticketBookingSlice";
 import { useState, useEffect } from "react"
 import axios from "axios";
 import { auth } from '../../../utilities/storage'
@@ -21,8 +21,12 @@ const Payment = (props) => {
     const [isPayment, setIsPayment] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
     const ticketBookingDetails = useSelector((state) => state.ticketBooking.ticketBookingDetails);
+    const returnTicketBookingDetails = useSelector((state) => state.ticketBooking.return_ticketBookingDetails);
+
     const guestInfo = useSelector((state) => state.ticketBooking.guestInfo);
+
     const [paymentMethod, setPaymentMethod] = useState({
         momo: false,
         zalopay: false,
@@ -39,6 +43,7 @@ const Payment = (props) => {
     var date_now = day + "/" + month + "/" + year;
     var hours = dateObj.getHours().toString().padStart(2, '0');
     var minutes = dateObj.getMinutes().toString().padStart(2, '0');
+
 
     // processing state
     const processBackBtn = () => {
@@ -61,7 +66,8 @@ const Payment = (props) => {
 
     const processPaymentBtn = () => {
         // post api
-        const data = {
+        const data = [
+        {
             ticket_id: ticketBookingDetails.ticket_id,
             date: date_now,
             time: `${hours}:${minutes}`,
@@ -76,11 +82,26 @@ const Payment = (props) => {
             guestInfo: {
                 ...guestInfo
             }
+        },
+        {
+            ticket_id: returnTicketBookingDetails.ticket_id,
+            date: date_now,
+            time: `${hours}:${minutes}`,
+            departure_city: returnTicketBookingDetails.departure_city,
+            arrival_city: returnTicketBookingDetails.arrival_city,
+            depot_address: returnTicketBookingDetails.chosen_depot,
+            payment_method: returnTicketBookingDetails.payment_method,
+            number_of_seats: returnTicketBookingDetails.choosing_seats.length,
+            chosen_seats: returnTicketBookingDetails.choosing_seats,
+            total_price: returnTicketBookingDetails.total_price,
+            user_id: auth.isLogin() ? auth.getUserProfile()._id : '',
+            guestInfo: {
+                ...guestInfo
+            }
         }
-
+        ]
         axios.post(`${process.env.REACT_APP_API_HOST}/tickets/book-ticket`, data)
             .then((res) => {
-                console.log(res)
                 setIsPayment(true)
             }).catch((err) => console.log(err))
 
@@ -94,6 +115,10 @@ const Payment = (props) => {
             stepThree: false,
             stepFour: true,
         })
+
+        dispatch(setTicketBookingDetails({}))
+        dispatch(setReturnTicketBookingDetails({}))
+
         !auth.isLogin() ? navigate('/') : navigate('/user-profile/my-ticket');
     }
 
@@ -150,8 +175,8 @@ const Payment = (props) => {
                         <div className={styles["time"]}>
                             <span className={styles["label"]}>Thời gian:</span>
                             <span className={styles["time-info"]}>
-                                <span className={styles["current-time"]}>{hours}:{minutes}</span>
-                                <span className={styles["date"]}>{date_now}</span>
+                                <span className={styles["current-time"]}>{ticketBookingDetails.departure_time} - {ticketBookingDetails.arrival_time}</span>
+                                <span className={styles["date"]}>{ticketBookingDetails.truncated_date.split('-').reverse().join('/')}</span>
                             </span>
                         </div>
                         <div className={styles["arrival-depot"]}>
@@ -170,9 +195,55 @@ const Payment = (props) => {
                         </div>
                     </div>
                 </div>
+                {/* SHOW ROUND-TRIP TICKET */}
+                {returnTicketBookingDetails.ticket_id && 
+                <>
+                <div className={`${styles["route-info-label"]} ${styles["border-top-none"]}`}>Thông tin chuyến:
+                    <span className={styles["route"]}>
+                        <span className={styles["departure_city"]}>{returnTicketBookingDetails.departure_city}</span>
+                        <span className={styles[""]}><RightArrowIcon className={styles["right-arrow-icon"]} /></span>
+                        <span className={styles["arrival_city"]}>{returnTicketBookingDetails.arrival_city}</span>
+                    </span>
+                </div>
+                <div className={styles["route-info"]}>
+                    <div className={styles["route-info-gr-1"]}>
+                        <div className={styles["route"]}>
+                            <span className={styles["label"]}>Tuyến xe:</span>
+                            <span className={styles["route"]}>
+                                <span className={styles["departure_city"]}>{returnTicketBookingDetails.departure_city}</span>
+                                <span className={styles[""]}><RightArrowIcon className={styles["right-arrow-icon"]} /></span>
+                                <span className={styles["arrival_city"]}>{returnTicketBookingDetails.arrival_city}</span>
+                            </span>
+                        </div>
+                        <div className={styles["time"]}>
+                            <span className={styles["label"]}>Thời gian:</span>
+                            <span className={styles["time-info"]}>
+                                <span className={styles["current-time"]}>{returnTicketBookingDetails.departure_time} - {returnTicketBookingDetails.arrival_time}</span>
+                                <span className={styles["date"]}>{returnTicketBookingDetails.truncated_date.split('-').reverse().join('/')}</span>
+                            </span>
+                        </div>
+                        <div className={styles["arrival-depot"]}>
+                            <span className={styles["label"]}>Điểm lên xe:</span>
+                            <span className={styles["depot"]}>{returnTicketBookingDetails.chosen_depot}</span>
+                        </div>
+                    </div>
+                    <div className={styles["route-info-gr-2"]}>
+                        <div className={styles["number-of-seats"]}>
+                            <span className={styles["label"]}>Số lượng ghế: </span>
+                            <span className={styles["seats-num"]}>{returnTicketBookingDetails.choosing_seats.length}</span>
+                        </div>
+                        <div className={styles["chosen-seats"]}>
+                            <span className={styles["label"]}>Số ghế: </span>
+                            <span className={styles["seats-id"]}>{returnTicketBookingDetails.choosing_seats.map((el, index) => index === returnTicketBookingDetails.choosing_seats.length - 1 ? `${el}` : `${el}, `)}</span>
+                        </div>
+                    </div>
+                </div>
+                </>
+                }
+
                 <div className={styles["total-price"]}>
                     <span className={styles["label"]}>Tổng tiền</span>
-                    <span className={styles["price"]}>{String(ticketBookingDetails.total_price).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "đ"}</span>
+                    <span className={styles["price"]}>{String(ticketBookingDetails.total_price + returnTicketBookingDetails.total_price).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "đ"}</span>
                 </div>
             </div>
             <div className={styles["payment-title"]}>Chọn cách thanh toán</div>

@@ -284,7 +284,7 @@ const BusRoute = () => {
 
       <Modal show={createShow} onHide={handleCreateClose}>
         <Modal.Header>
-          <div className={styles["modal-head"]}>TẠO TRẠM XE</div>
+          <div className={styles["modal-head"]}>TẠO TUYẾN XE</div>
         </Modal.Header>
         <Modal.Body>
           <form

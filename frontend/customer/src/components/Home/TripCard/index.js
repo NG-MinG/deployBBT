@@ -1,5 +1,4 @@
 import React from 'react';
-import { toPriceFormat } from '../../../utilities/format';
 import { useNavigate } from 'react-router-dom';
 
 import classes from './TripCard.module.css';
@@ -27,7 +26,7 @@ const TripCard = ({ trip }) => {
                     </div>
                     <div className={classes.trip_card_info_item}>
                         <span><FontAwesomeIcon icon={faTicket} /></span>
-                        <span>{toPriceFormat(trip.price)}đ</span></div>
+                        <span>{trip.price}đ</span></div>
                 </div>
             </div>
         </div>

@@ -72,6 +72,17 @@ const ManageTicketPage = () => {
     const cancelCRUDTicket = () => {
         dispatch(setCurrentTicketDetails({}));
         setIsCRUDTicket(false);
+        // reset selected changes
+        setSelectedChange((pre) => {
+            return {
+                ...pre,
+                departure_city: '',
+                arrival_city: '',
+                departure_depot: '',
+                arrival_depot: '',
+                bus_type: '',
+            }
+        })
     }
 
     // handle select changes in CRUD ticket form
@@ -171,11 +182,9 @@ const ManageTicketPage = () => {
         let data = {...currentTicketDetails};
         if (data._id === '') delete data._id; // remove the id if it's empty, and let the backend processing do its thing (when creating a new ticket)
         const isEmptyProperty = Object.values(data).some(value => (value === ''));
-
         // if date is not valid
         if (data.date === '') {
             alert("Vui lòng nhập đúng định dạng ngày (vd: 17-05-2023)");
-            console.log("data: " + data.date);
             return;
         }
 
@@ -204,6 +213,17 @@ const ManageTicketPage = () => {
             alert('Vé đã được tạo thành công!');
             navigate("/admin/manage-ticket/ticket");
             setIsCRUDTicket(false);
+            // reset selected changes
+            setSelectedChange((pre) => {
+                return {
+                    ...pre,
+                    departure_city: '',
+                    arrival_city: '',
+                    departure_depot: '',
+                    arrival_depot: '',
+                    bus_type: '',
+                }
+            })
         }).catch((err) => {
             console.error(err);
         })
@@ -244,6 +264,17 @@ const ManageTicketPage = () => {
                 navigate("/admin/manage-ticket/ticket");
                 dispatch(setCurrentTicketDetails({}));
                 setIsCRUDTicket(false);
+                // reset selected changes
+                setSelectedChange((pre) => {
+                    return {
+                        ...pre,
+                        departure_city: '',
+                        arrival_city: '',
+                        departure_depot: '',
+                        arrival_depot: '',
+                        bus_type: '',
+                    }
+                })
             }
         }).catch((err) => {
             console.log(err);

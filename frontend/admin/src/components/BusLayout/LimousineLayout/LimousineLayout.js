@@ -44,7 +44,7 @@ const LimousineLayout = (props) => {
                             <td><Seat greenColor={props.greenColor} color={props.bookedSeats.includes("A15") ? "red" : "#737B83"} seatID="A15" isChoosing={props.choosingSeats.includes("A15")} onChooseSeat={props.onChooseSeat} /></td>
                             <td className={styles["empty-seat-space"]}><Seat greenColor={props.greenColor} color="#737B83" /></td>
                             {/* <td><Seat greenColor={props.greenColor} color = "red" seatID = "A16" isChoosing = {props.choosingSeats.includes("A16")} onChooseSeat = {props.onChooseSeat}/></td> */}
-                            <td><Seat greenColor={props.greenColor} color={props.bookedSeats.includes("A17") ? "red" : "#737B83"} seatID="A16" isChoosing={props.choosingSeats.includes("A17")} onChooseSeat={props.onChooseSeat} /></td>
+                            <td><Seat greenColor={props.greenColor} color={props.bookedSeats.includes("A16") ? "red" : "#737B83"} seatID="A16" isChoosing={props.choosingSeats.includes("A16")} onChooseSeat={props.onChooseSeat} /></td>
                         </tr>
                     </tbody>
                 </table>
@@ -81,7 +81,7 @@ const LimousineLayout = (props) => {
                             <td><Seat greenColor={props.greenColor} color={props.bookedSeats.includes("B15") ? "red" : "#737B83"} seatID="B15" isChoosing={props.choosingSeats.includes("B15")} onChooseSeat={props.onChooseSeat} /></td>
                             <td className={styles["empty-seat-space"]}><Seat greenColor={props.greenColor} color="#737B83" /></td>
                             {/* <td><Seat greenColor={props.greenColor} color = "red" seatID = "B16" isChoosing = {props.choosingSeats.includes("B16")} onChooseSeat = {props.onChooseSeat}/></td> */}
-                            <td><Seat greenColor={props.greenColor} color={props.bookedSeats.includes("B16") ? "red" : "#737B83"} seatID="B16" isChoosing={props.choosingSeats.includes("B17")} onChooseSeat={props.onChooseSeat} /></td>
+                            <td><Seat greenColor={props.greenColor} color={props.bookedSeats.includes("B16") ? "red" : "#737B83"} seatID="B16" isChoosing={props.choosingSeats.includes("B16")} onChooseSeat={props.onChooseSeat} /></td>
                         </tr>
                     </tbody>
                 </table>

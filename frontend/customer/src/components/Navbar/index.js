@@ -61,12 +61,12 @@ const Navbar = () => {
             </div>
 
             <div className={classes.foot}>
+                <Button className={classes.contact_btn} outline onClick={() => navigate('/contact')}>
+                    <FontAwesomeIcon className={classes.phoneIcon} icon={faPhone} />
+                    <span>Liên hệ</span>
+                </Button>
                 { !isLogin ? 
                     <>
-                    <Button className={classes.contact_btn} outline onClick={() => navigate('/contact')}>
-                        <FontAwesomeIcon className={classes.phoneIcon} icon={faPhone} />
-                        <span>Liên hệ</span>
-                    </Button>
                     <Button onClick={() => setShowLogin(true) }>Đăng nhập</Button>
                     </>
                     :

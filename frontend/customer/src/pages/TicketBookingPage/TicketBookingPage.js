@@ -1,5 +1,8 @@
 import {useEffect, useState} from "react"
-    import { useSearchParams } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setTicketBookingDetails, setReturnTicketBookingDetails } from "../../store/reducers/ticketBookingSlice";
 import ChooseRoute from "../../components/TicketBooking/ChooseRoute/ChooseRoute"
 import ConfirmRoute from "../../components/TicketBooking/ConfirmRoute/ConfirmRoute"
 import GuestInfo from "../../components/TicketBooking/GuestInfo/GuestInfo"
@@ -7,6 +10,7 @@ import Payment from "../../components/TicketBooking/Payment/Payment"
 
 
 const TicketBookingPage = () => {
+    const dispatch = useDispatch();
     const [searchParams] = useSearchParams();
     const departure_city = searchParams.get('departure_city');
     const arrival_city = searchParams.get('arrival_city');
@@ -21,6 +25,14 @@ const TicketBookingPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [process])
+
+    // clean up function
+    useEffect(() => {
+        return () => {
+            dispatch(setTicketBookingDetails({}));
+            dispatch(setReturnTicketBookingDetails({}));
+        }
+    }, [])
 
     const setStep = (newState) => {
         setProcess(pre => ({

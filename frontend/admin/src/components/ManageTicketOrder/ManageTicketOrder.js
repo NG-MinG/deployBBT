@@ -94,7 +94,7 @@ const ManageTicketOrder = () => {
         </div>
         <div className={styles.listItem}>
           {ticketHistory.map((value, index) => (
-            <ManageTicketOrderItem key={index} index={index + 1} value={value} showDetail={showDetail} deleteItem={deleteItem} />
+            <ManageTicketOrderItem key={value.id} index={index + 1} value={value} showDetail={showDetail} deleteItem={deleteItem} />
           ))}
         </div>
       </div>

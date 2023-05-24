@@ -12,10 +12,14 @@ import SleeperLayout from "../BusLayout/SleeperLayout/SleeperLayout";
 import ChairLayout from "../BusLayout/ChairLayout/ChairLayout";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setTicketBookingDetails } from "../../store/reducers/ticketBookingSlice";
+import { setTicketBookingDetails, setReturnTicketBookingDetails } from "../../store/reducers/ticketBookingSlice";
+import { useSearchParams } from "react-router-dom"
 
 
 const Ticket = (props) => {
+    const [searchParams] = useSearchParams();
+    const ticket_type = searchParams.get('ticket_type');
+    
     const [choosingSeats, setChoosingSeats] = useState([]);
     const [price, setPrice] = useState(0);
     const dispatch = useDispatch();
@@ -35,9 +39,10 @@ const Ticket = (props) => {
             stepOne: false,
             stepTwo: true,
         });
-        dispatch(setTicketBookingDetails({
+        if (ticket_type) {
+            dispatch(setTicketBookingDetails({
             ticket_id: props.ticketDetails._id,
-            truncatedDate: props.ticketDetails.truncatedDate,
+            truncated_date: props.ticketDetails.truncatedDate,
             departure_time: props.ticketDetails.departure_time,
             arrival_time: props.ticketDetails.arrival_time,
             departure_city: props.ticketDetails.departure_city,
@@ -57,6 +62,32 @@ const Ticket = (props) => {
             // ***
             starting_depots: props.startingDepots,
         }))
+    }
+
+        else {
+            dispatch(setReturnTicketBookingDetails({
+                ticket_id: props.ticketDetails._id,
+                truncated_date: props.ticketDetails.truncatedDate,
+                departure_time: props.ticketDetails.departure_time,
+                arrival_time: props.ticketDetails.arrival_time,
+                departure_city: props.ticketDetails.departure_city,
+                arrival_city: props.ticketDetails.arrival_city,
+                ticket_type: props.ticketDetails.ticket_type,
+                price: props.ticketDetails.price,
+                travel_time: props.ticketDetails.travel_time,
+                distance: props.ticketDetails.distance,
+                departure_depot: props.ticketDetails.departure_depot,
+                arrival_depot: props.ticketDetails.arrival_depot,
+                bus_type: props.ticketDetails.bus_type,
+                booked_seats: props.ticketDetails.booked_seats,
+                reserved_seats: props.ticketDetails.reserved_seats,
+                total_seats: props.ticketDetails.total_seats,
+                choosing_seats: choosingSeats,
+                total_price: price,
+                // ***
+                starting_depots: props.startingDepots,
+            }))
+        }
     }
 
 

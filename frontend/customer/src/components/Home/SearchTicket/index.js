@@ -88,6 +88,7 @@ const SearchTicket = () => {
         const departureCity = ticketForm.current.departure_city.value;
         const arrivalCity = ticketForm.current.arrival_city.value;
         const date = ticketForm.current.departure_date.value;
+        const adate = ticketForm.current.arrival_date.value;
 
         if (new Date(date) < new Date(`${new Date().toISOString().split('T')[0]}T00:00:00.000Z`)) {
             return alert('Ngày đi không hợp lệ');
@@ -95,9 +96,15 @@ const SearchTicket = () => {
 
         const ticketType = ticketForm.current.ticket_type.value;
         navigate(
-            `/ticket-booking?departure_city=${departureCity}&arrival_city=${arrivalCity}&date=${date}&ticket_type=${ticketType}`
+            `/ticket-booking?departure_city=${departureCity}&arrival_city=${arrivalCity}&date=${date}&arrival_date=${adate}&ticket_type=${ticketType}`
         );
     };
+
+    const [ticketType, setType] = useState(1);
+
+    const changeType = (event) => {
+        setType(event.target.value);
+    }
 
     return (
         <form
@@ -108,12 +115,13 @@ const SearchTicket = () => {
         >
             <div className={classes.radio_group}>
                 <RadioButton
+                    onChange={changeType}
                     name="ticket_type"
                     defaultChecked
                     value="1"
                     text="Một chiều"
                 />
-                <RadioButton name="ticket_type" value="2d" text="Khứ hồi" />
+                <RadioButton onChange={changeType} name="ticket_type" value="2" text="Khứ hồi" />
             </div>
             <div className={classes.trip_group}>
                 <div className={classes.location_group}>
@@ -234,7 +242,10 @@ const SearchTicket = () => {
                         <div className={classes.arrival_time}>
                             <div className={classes.choose_title}>Ngày về</div>
                             <div className={classes.time_choosen}>
-                                <TimePicker name="arrival_date" disable />
+                                { ticketType === '2' ?
+                                    <TimePicker name="arrival_date" required />
+                                    : <TimePicker name="arrival_date" disable />
+                                }
                             </div>
                         </div>
                     </div>
