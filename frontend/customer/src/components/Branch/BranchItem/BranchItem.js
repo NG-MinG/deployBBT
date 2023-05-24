@@ -15,7 +15,7 @@ export default function BranchItem({ value }) {
           </div>
           <div className={`${styles.item} ${styles.phone}`}>
             <FontAwesomeIcon icon={faPhone} style={{ color: '#000', fontSize: '1.9rem' }} />
-            <p>{values.phone}</p>
+            <p>{values.phone === '.' ? '0294.4 232.232' : values.phone}</p>
           </div>
         </div>
       ))}
